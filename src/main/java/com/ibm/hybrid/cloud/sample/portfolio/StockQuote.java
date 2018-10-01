@@ -135,7 +135,7 @@ public class StockQuote extends Application {
 
 		JsonObject quote = null;
 		try {
-			System.out.println("Connecting to Redis using URL: "+redis_url);				
+			System.out.println("Connecting to Redis using the URL: "+redis_url);				
 
 			URI jedisURI = new URI(redis_url);
 			Jedis jedis = new Jedis(jedisURI); //Connect to Redis
