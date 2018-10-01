@@ -153,7 +153,7 @@ public class StockQuote extends Application {
 				reader.close();
 
 				if (isStale(quote)) {
-					System.out.println(symbol+" in Redis was too stale");
+					System.out.println(symbol+" in Rediss was too stale");
 					try {
 						quote = extractFromQuandl(invokeREST("GET", uri), symbol); //so go get a less stale value
 						jedis.set(symbol, quote.toString()); //Put it Redis so it's there next time we ask
